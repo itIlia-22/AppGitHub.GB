@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Public/AppGitHubGB/app/src/main/res/layout/activity_main.xml" value="0.18659420289855072" />
         <entry key="..\:/Users/Public/AppGitHubGB/app/src/main/res/layout/fragment_user.xml" value="0.18659420289855072" />
         <entry key="..\:/Users/Public/AppGitHubGB/app/src/main/res/layout/item_list.xml" value="0.18659420289855072" />
+        <entry key="..\:/Users/Public/AppGitHubGB/app/src/main/res/layout/item_list_users.xml" value="0.18659420289855072" />
       </map>
     </option>
   </component>

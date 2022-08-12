@@ -7,27 +7,30 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appgithubgb.R
+import com.example.appgithubgb.databinding.ItemListBinding
 import com.example.appgithubgb.model.GitHubUser
+import com.example.appgithubgb.view.OnItemFragment
+import com.example.appgithubgb.view.UserInfo
 
 
-class AdapterUser() :
+class AdapterUser(private val onItemFragment: OnItemFragment) :
     RecyclerView.Adapter<GithubUserViewHolder>() {
-     var user: List<GitHubUser> = emptyList()
-
-    @SuppressLint("NotifyDataSetChanged")
-    set(value){
-        field = value
-       notifyDataSetChanged()
-    }
+    var user: List<GitHubUser> = emptyList()
+        @SuppressLint("NotifyDataSetChanged")
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GithubUserViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list, parent, false)
-        return GithubUserViewHolder(view)
+        val view = ItemListBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return GithubUserViewHolder(view.root)
     }
 
     override fun onBindViewHolder(holder: GithubUserViewHolder, position: Int) {
         holder.bind(user[position])
+
     }
 
     override fun getItemCount(): Int = user.size
@@ -39,8 +42,15 @@ class GithubUserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         itemView.findViewById<TextView>(R.id.tvUserLogin)
     }
 
-    fun bind(item: GitHubUser) = with(item) {
-        uLogin.text = login
+    fun bind(item: GitHubUser)  {
+        uLogin.text = item.login
+
+        uLogin.setOnClickListener {
+
+        }
+
+
     }
+
 
 }

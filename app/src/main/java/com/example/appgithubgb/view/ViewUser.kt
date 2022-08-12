@@ -1,4 +1,4 @@
-package com.example.modelviewpresenter.lesson2.view
+package com.example.appgithubgb.view
 
 import com.example.appgithubgb.model.GitHubUser
 import moxy.MvpView
@@ -6,7 +6,7 @@ import moxy.viewstate.strategy.AddToEndSingleStrategy
 import moxy.viewstate.strategy.StateStrategyType
 
 @StateStrategyType(AddToEndSingleStrategy::class)
-interface MainViewUser : MvpView {
+interface ViewUser : MvpView {
  fun initList(list: List<GitHubUser>)
 
 
