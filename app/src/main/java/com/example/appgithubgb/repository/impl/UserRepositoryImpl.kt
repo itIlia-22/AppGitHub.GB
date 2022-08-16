@@ -1,7 +1,7 @@
 package com.example.appgithubgb.repository.impl
 
 import com.example.appgithubgb.model.GitHubUser
-import com.example.modelviewpresenter.lesson2.view.GithubRepo
+import com.example.appgithubgb.repository.GithubRepo
 
 class UserRepositoryImpl: GithubRepo {
 

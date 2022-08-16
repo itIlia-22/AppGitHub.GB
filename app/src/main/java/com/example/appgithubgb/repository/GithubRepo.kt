@@ -1,4 +1,4 @@
-package com.example.modelviewpresenter.lesson2.view
+package com.example.appgithubgb.repository
 
 import com.example.appgithubgb.model.GitHubUser
 

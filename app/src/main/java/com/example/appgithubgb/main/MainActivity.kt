@@ -4,7 +4,7 @@ import android.os.Bundle
 import com.example.appgithubgb.R
 import com.example.appgithubgb.core.OnBackPressendListener
 import com.example.appgithubgb.databinding.ActivityMainBinding
-import com.example.appgithubgb.view.MyApp
+import com.example.appgithubgb.MyApp
 import com.github.terrakok.cicerone.androidx.AppNavigator
 import moxy.MvpAppCompatActivity
 import moxy.ktx.moxyPresenter
