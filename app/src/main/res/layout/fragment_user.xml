@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ProgressBar
+        android:id="@+id/lodList"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/sizeBar"
+        android:layout_gravity="center"
+        tools:visibility="visible"
+        android:visibility="gone"
+       />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecyclerViewUsers"
         android:layout_width="match_parent"
