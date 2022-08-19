@@ -6,4 +6,6 @@ import moxy.viewstate.strategy.StateStrategyType
 
 @StateStrategyType(AddToEndSingleStrategy::class)
 interface UserInfoView:MvpView {
+    fun showOriginImage(pathImageFile: String)
+    fun showConvertImage(pathImageFile: String)
 }

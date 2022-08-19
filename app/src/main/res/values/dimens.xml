@@ -2,5 +2,6 @@
 <resources>
     <dimen name="tvSize">30sp</dimen>
     <dimen name="sizeBar">200dp</dimen>
+    <dimen name="wa">200dp</dimen>
 
 </resources>

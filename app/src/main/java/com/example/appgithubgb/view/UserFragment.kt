@@ -41,6 +41,7 @@ class UserFragment : MvpAppCompatFragment(), UserView, OnBackPressendListener {
             RecyclerViewUsers.adapter = adapter
 
 
+
         }
     }
 
