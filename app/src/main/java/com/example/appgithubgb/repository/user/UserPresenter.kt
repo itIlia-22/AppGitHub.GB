@@ -24,14 +24,14 @@ class UserPresenter(
                 viewState.initList(it)
                 viewState.hideLod()
             }, {
-                Log.e("1", "Что то пошло не так")
+                Log.e("1", it.toString())
             })
 
 
     }
 
     fun openInfoFragment(login: String) {
-        router.navigateTo(UsersScreen.UsersInfoScreen(login))
+        router.navigateTo(UsersScreen.UsersDetailsScreen(login))
     }
 
     fun onBackPressed(): Boolean {

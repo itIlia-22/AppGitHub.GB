@@ -1,5 +1,6 @@
 package com.example.appgithubgb.lesson5
 
+import com.example.appgithubgb.lesson5.model.UsersDto
 import io.reactivex.rxjava3.core.Single
 import retrofit2.http.GET
 import retrofit2.http.Path

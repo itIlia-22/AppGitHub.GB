@@ -9,8 +9,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.appgithubgb.MyApp
 import com.example.appgithubgb.core.OnBackPressendListener
 import com.example.appgithubgb.databinding.FragmentUserBinding
+import com.example.appgithubgb.lesson5.repositoryusers.UsersGitRepositoryImpl
+import com.example.appgithubgb.lesson5.retrofit.Network
 import com.example.appgithubgb.model.GitHubUser
-import com.example.appgithubgb.repository.impl.UserRepositoryImpl
 import com.example.appgithubgb.repository.user.UserAdapter
 import com.example.appgithubgb.repository.user.UserPresenter
 import com.example.appgithubgb.repository.user.UserView
@@ -23,7 +24,7 @@ class UserFragment : MvpAppCompatFragment(), UserView, OnBackPressendListener {
 
     private lateinit var banding: FragmentUserBinding
     private val presenter: UserPresenter by moxyPresenter {
-        UserPresenter(UserRepositoryImpl(),
+        UserPresenter(UsersGitRepositoryImpl(Network.usersApi),
             MyApp.instance.router)
     }
 

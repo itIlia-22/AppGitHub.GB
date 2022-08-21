@@ -1,6 +1,6 @@
-package com.example.appgithubgb.lesson5
+package com.example.appgithubgb.lesson5.retrofit
 
-import com.example.appgithubgb.BuildConfig
+import com.example.appgithubgb.lesson5.UsersApi
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

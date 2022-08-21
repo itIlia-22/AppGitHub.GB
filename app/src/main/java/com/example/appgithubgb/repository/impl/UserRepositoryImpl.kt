@@ -3,7 +3,7 @@ package com.example.appgithubgb.repository.impl
 import com.example.appgithubgb.model.GitHubUser
 import com.example.appgithubgb.repository.GithubRepo
 import io.reactivex.rxjava3.core.Single
-
+/*
 class UserRepositoryImpl: GithubRepo {
 
     private val repo = listOf(
@@ -21,4 +21,12 @@ class UserRepositoryImpl: GithubRepo {
 
         }
     }
-}
+
+    override fun getGitUsers(login: String): Single<GitHubUser> {
+
+    }
+
+    override fun getRepoUsers(repo: String): Single<GitHubUser> {
+
+    }
+}*/

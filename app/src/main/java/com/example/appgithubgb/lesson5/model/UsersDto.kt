@@ -1,8 +1,7 @@
-package com.example.appgithubgb.lesson5
+package com.example.appgithubgb.lesson5.model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
-import moxy.viewstate.strategy.StateStrategyType
 
 data class UsersDto(
     @Expose
@@ -13,7 +12,7 @@ data class UsersDto(
     val login:String,
     @Expose
     @SerializedName("avatar_url")
-    val avatarUrl:String,
+    val avatarUrl:String?,
     @Expose
     @SerializedName("repos_url")
     val repos_url:String,

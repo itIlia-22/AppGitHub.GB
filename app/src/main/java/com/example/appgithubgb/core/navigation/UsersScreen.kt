@@ -2,6 +2,7 @@ package com.example.appgithubgb.core.navigation
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
+import com.example.appgithubgb.lesson5.view.UserDetailsFragment
 import com.example.appgithubgb.view.UserFragment
 import com.example.appgithubgb.view.UserInfoFragment
 import com.github.terrakok.cicerone.androidx.FragmentScreen
@@ -14,6 +15,12 @@ object UsersScreen:FragmentScreen{
     data class UsersInfoScreen( val Login:String):FragmentScreen {
         override fun createFragment(factory: FragmentFactory): Fragment {
            return UserInfoFragment.getInstance(Login)
+        }
+    }
+
+    data class UsersDetailsScreen( val Login:String):FragmentScreen {
+        override fun createFragment(factory: FragmentFactory): Fragment {
+            return UserDetailsFragment.getInstance(Login)
         }
     }
 
