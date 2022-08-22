@@ -65,6 +65,7 @@ class UserDetailsFragment : MvpAppCompatFragment(), UserDetailsView, OnBackPress
         binding?.apply {
             tvUserLogin.makeGone()
             ivUserAvatar.makeGone()
+            tvUserRepo.makeGone()
             progress.makeVisible()
         }
 
@@ -74,6 +75,7 @@ class UserDetailsFragment : MvpAppCompatFragment(), UserDetailsView, OnBackPress
         binding?.apply {
             tvUserLogin.makeVisible()
             ivUserAvatar.makeVisible()
+            tvUserRepo.makeVisible()
             progress.makeGone()
         }
     }
@@ -81,6 +83,7 @@ class UserDetailsFragment : MvpAppCompatFragment(), UserDetailsView, OnBackPress
     override fun show(user: GitHubUser) {
         binding?.apply {
             tvUserLogin.text = user.login
+            tvUserRepo.text = user.repos_url
             ivUserAvatar.loadImage(user.avatarUrl)
         }
 
