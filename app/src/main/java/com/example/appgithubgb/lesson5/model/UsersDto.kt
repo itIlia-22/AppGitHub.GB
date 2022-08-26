@@ -12,7 +12,7 @@ data class UsersDto(
     val login:String,
     @Expose
     @SerializedName("avatar_url")
-    val avatarUrl:String?,
+    val avatarUrl:String,
     @Expose
     @SerializedName("repos_url")
     val repos_url:String,

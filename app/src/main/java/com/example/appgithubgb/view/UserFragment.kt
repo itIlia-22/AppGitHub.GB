@@ -24,7 +24,10 @@ class UserFragment : MvpAppCompatFragment(), UserView, OnBackPressendListener {
 
     private lateinit var banding: FragmentUserBinding
     private val presenter: UserPresenter by moxyPresenter {
-        UserPresenter(UsersGitRepositoryImpl(Network.usersApi),
+        return@moxyPresenter UserPresenter(UsersGitRepositoryImpl(
+            Network.usersApi,
+            MyApp.instance.dataBase.userDao(),
+            MyApp.instance.getConnectSingle()),
             MyApp.instance.router)
     }
 
@@ -40,7 +43,6 @@ class UserFragment : MvpAppCompatFragment(), UserView, OnBackPressendListener {
         with(banding) {
             RecyclerViewUsers.layoutManager = LinearLayoutManager(requireContext())
             RecyclerViewUsers.adapter = adapter
-
 
 
         }
@@ -76,7 +78,7 @@ class UserFragment : MvpAppCompatFragment(), UserView, OnBackPressendListener {
     }
 
     override fun onLodError() {
-       Toast.makeText(context,"error",Toast.LENGTH_LONG).show()
+        Toast.makeText(context, "error", Toast.LENGTH_LONG).show()
     }
 
     override fun onBackPressend() = presenter.onBackPressed()

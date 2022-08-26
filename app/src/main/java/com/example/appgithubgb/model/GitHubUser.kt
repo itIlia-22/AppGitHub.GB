@@ -12,5 +12,4 @@ data class GitHubUser(
 ) : Parcelable
 
 
-@Parcelize
-data class UserInfo(val logIfo: String) : Parcelable
+

@@ -21,7 +21,10 @@ class UserDetailsFragment : MvpAppCompatFragment(), UserDetailsView, OnBackPress
 
     lateinit var binding: FragmentDetailsUserBinding
     private val presenter: DetailsPresenter by moxyPresenter {
-        DetailsPresenter(UsersGitRepositoryImpl(Network.usersApi),
+        DetailsPresenter(UsersGitRepositoryImpl(
+            Network.usersApi,
+            MyApp.instance.dataBase.userDao(),
+            MyApp.instance.getConnectSingle()),
             MyApp.instance.router)
     }
 

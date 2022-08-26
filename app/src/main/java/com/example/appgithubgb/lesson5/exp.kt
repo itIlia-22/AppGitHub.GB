@@ -5,6 +5,7 @@ import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.example.appgithubgb.R
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.disposables.Disposable
@@ -33,4 +34,18 @@ fun View.makeVisible() {
 
 fun View.makeGone() {
     this.visibility = View.GONE
+}
+
+
+fun <T> Single<T>.doCompletable(
+    pradicate:Boolean,
+    completableCreate: (data:T)-> Completable
+):Single<T>{
+    return if (pradicate){
+        this.flatMap {
+            completableCreate(it).andThen(Single.just(it))
+        }
+    }else{
+        this
+    }
 }
